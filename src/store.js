@@ -7,10 +7,12 @@ import {
 import thunk from 'redux-thunk'
 
 import appbar from './state/appbar'
+import auth from './state/auth'
 
 
 const reducer = combineReducers({
-    appbar
+    appbar,
+    auth
 })
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
