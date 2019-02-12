@@ -12,11 +12,9 @@ import { Provider } from 'react-redux'
 
 ReactDOM.render(
     <Provider store={store}>
-        <Auth>
-            <MuiThemeProvider>
-                <App />
-            </MuiThemeProvider>
-        </Auth>
+        <MuiThemeProvider>
+            <App />
+        </MuiThemeProvider>
     </Provider>,
     document.getElementById('root')
 );
