@@ -5,6 +5,7 @@ import Auth from './components/Auth';
 import { connect } from 'react-redux'
 import Header from './components/Heder'
 import Register from './components/Register';
+import Upload from './components/Upload';
 
 const App = (props) => (
   <div>
@@ -13,7 +14,7 @@ const App = (props) => (
       props.isLogged ?
         <Header />
         :
-        <Auth />
+        <Upload />
     }
   </div>
 )
