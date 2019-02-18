@@ -8,30 +8,32 @@ import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
 import { UnLoggedAction } from '../../state/appbar';
 
 const LoggedMenu = (props) => (
-    <IconMenu
-        {...props}
-        iconButtonElement={
-            <IconButton>
-                <MoreVertIcon />
-            </IconButton>
-        }
-        targetOrigin={{ horizontal: 'right', vertical: 'top' }}
-        anchorOrigin={{ horizontal: 'right', vertical: 'top' }}
-    >
-        <MenuItem
-            primaryText="Refresh"
-        />
-        <MenuItem
-            primaryText="Help"
-        />
-        <MenuItem
-            primaryText="Sign out"
-            onClick={props.unLogged}
-        />
-    </IconMenu>
+    <div>
+        <IconMenu
+            {...props}
+            iconButtonElement={
+                <IconButton>
+                    <MoreVertIcon />
+                </IconButton>
+            }
+            targetOrigin={{ horizontal: 'right', vertical: 'top' }}
+            anchorOrigin={{ horizontal: 'right', vertical: 'top' }}
+        >
+            <MenuItem
+                primaryText="Refresh"
+            />
+            <MenuItem
+                primaryText="Help"
+            />
+            <MenuItem
+                primaryText="Sign out"
+                onClick={props.unlogged}
+            />
+        </IconMenu>
+    </div>
 );
 
 const mapDispatchToProps = dispatch => ({
-    unLogged: () => dispatch(UnLoggedAction()),
+    unlogged: () => dispatch(UnLoggedAction()),
 })
 export default connect(null, mapDispatchToProps)(LoggedMenu)
